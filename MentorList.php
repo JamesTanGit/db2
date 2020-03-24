@@ -48,7 +48,6 @@ else {
   <table style="width:100%">
     <tr>
       <th>Course Title</th>
-      <th>Section Name</th>
       <th>Start Date</th>
       <th>End Date</th>
       <th>Time Slot</th>
@@ -73,7 +72,6 @@ else {
     while ($meetinginfowithtime = mysqli_fetch_array($meetinginfowithtimeresult, MYSQLI_ASSOC)) {
         echo("<tr>");
         echo("<td>".$meetinginfowithtime['meet_name']."</td>");
-        echo("<td>"."?"."</td>");
         echo("<td>"."1/1/2020"."</td>");
         echo("<td>"."12/31/2020"."</td>");
         echo("<td>".$meetinginfowithtime['day_of_the_week']." ".

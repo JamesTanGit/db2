@@ -48,7 +48,6 @@ else {
   <table style="width:100%">
     <tr>
       <th>Course Title</th>
-      <th>Section Name</th>
       <th>Start Date</th>
       <th>End Date</th>
       <th>Time Slot</th>
@@ -110,7 +109,6 @@ else {
         }
         echo("<tr>");
         echo("<td>".$meetinginfowithtime['meet_name']."</td>");
-        echo("<td>"."?"."</td>");
         echo("<td>".$meetinginfowithtime['start_date']."</td>");
         echo("<td>".$meetinginfowithtime['end_date']."</td>");
         echo("<td>".$meetinginfowithtime['day_of_the_week']." ".
@@ -133,7 +131,6 @@ else {
         }
         echo("</tr>");
     }
-
     ?>
 
 
