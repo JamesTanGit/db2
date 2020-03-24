@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2020 at 08:45 AM
+-- Generation Time: Mar 24, 2020 at 12:46 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -125,8 +125,10 @@ INSERT INTO `enroll2` (`meet_id`, `mentor_id`) VALUES
 (3, 6),
 (4, 7),
 (5, 11),
+(5, 41),
 (6, 12),
 (7, 12),
+(7, 41),
 (8, 14),
 (8, 41),
 (9, 15);

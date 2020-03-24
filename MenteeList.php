@@ -87,7 +87,7 @@ else {
       while ($row = mysqli_fetch_array($enrolledmenteeidresult, MYSQLI_ASSOC)) {
           $menteearray[] =  $row['mentee_id'];
       }
-
+      // enrolled mentor id query
       $enrolledmentoridquery = "SELECT mentor_id from enroll2 WHERE meet_id = '{$meetinginfowithtime['meet_id']}'";
       $enrolledmentoridresult = mysqli_query($myconnection, $enrolledmentoridquery)
       or die ('Query failed: ' . mysqli_error($myconnection));
@@ -125,7 +125,7 @@ else {
         echo("<td>".$enrolledmentee['count']."</td>");
         echo("<td>".$enrolledmentor['count']."</td>");
 
-        if ($enrolledmentor['count'] < 3 && !(in_array($_SESSION['user_id'], $mentorarray)) && ($studentinfo['grade']>= $meetinginfowithgroup['mentor_grade_req']) ) {
+        if ($enrolledmentor['count'] <= 3 && !(in_array($_SESSION['user_id'], $mentorarray)) && ($studentinfo['grade']>= $meetinginfowithgroup['mentor_grade_req']) ) {
             echo("<td>"."<a href='Teach.php?key=".$meetinginfowithtime['meet_id']."'>Teach</a>"."</td>");
         }
         else {
