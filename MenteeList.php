@@ -56,7 +56,7 @@ else {
       <th>Mentee Req</th>
       <th>Enrolled Mentor</th>
       <th>Enrolled Mentee</th>
-      <th>Teach as Mentor</th>
+      <!-- <th>Teach as Mentor</th> -->
       <th>Materials</th>
     </tr>
     <?php
@@ -125,12 +125,12 @@ else {
         echo("<td>".$enrolledmentee['count']."</td>");
         echo("<td>".$enrolledmentor['count']."</td>");
 
-        if ($enrolledmentor['count'] <= 3 && !(in_array($_SESSION['user_id'], $mentorarray)) && ($studentinfo['grade']>= $meetinginfowithgroup['mentor_grade_req']) ) {
-            echo("<td>"."<a href='Teach.php?key=".$meetinginfowithtime['meet_id']."'>Teach</a>"."</td>");
-        }
-        else {
-            echo("<td>"."N/A"."</td>");
-        }
+        // if ($enrolledmentor['count'] <= 3 && !(in_array($_SESSION['user_id'], $mentorarray)) && ($studentinfo['grade']>= $meetinginfowithgroup['mentor_grade_req']) ) {
+        //     echo("<td>"."<a href='Teach.php?key=".$meetinginfowithtime['meet_id']."'>Teach</a>"."</td>");
+        // }
+        // else {
+        //     echo("<td>"."N/A"."</td>");
+        // }
         echo("<td>"."<a href='Materials.php?key=".$meetinginfowithtime['meet_id']."'>View</a>"."</td>");
         echo("</tr>");
     }

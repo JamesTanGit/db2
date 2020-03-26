@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id'])) {
 
     // variables
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);;
+    $password = $_POST['password'];
     $name = $_POST['name'];
     $phone = $_POST['phone'];
 

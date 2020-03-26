@@ -38,7 +38,7 @@
             $emailcheckresult = mysqli_query($myconnection, $emailcheckselect)
             or die ('Query failed: ' . mysqli_error($myconnection));
             $emailcheck = mysqli_fetch_array($emailcheckresult, MYSQLI_ASSOC);
-            if ($email == $emailcheck['email']) {
+            if (isset($emailcheck['email']) && $email == $emailcheck['email']) {
                 echo("Email is currently taken. Use another.");
             }
             else {

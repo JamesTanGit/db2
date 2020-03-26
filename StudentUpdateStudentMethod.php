@@ -14,7 +14,7 @@ if (isset($_SESSION['user_id'])) {
     $oldemail = $_POST['oldemail'];
     $newemail = $_POST['newemail'];
     $oldpassword = $_POST['oldpassword'];
-    $newpassword = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
+    $newpassword = $_POST['newpassword'];
     $newname = $_POST['newstudentname'];
     $newphone = $_POST['newphone'];
     $newgrade = $_POST['newgrade'];
@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id'])) {
     $studentresult = mysqli_query($myconnection, $studentquery)
     or die ('Query failed: ' . mysqli_error($myconnection));
     $student = mysqli_fetch_array ($studentresult, MYSQLI_ASSOC);
-    if ($oldemail == $student["email"] && password_verify($_POST['oldpassword'], $student['password'])) {
+    if ($oldemail == $student["email"] && $_POST['oldpassword'] == $student['password']) {
         // update statement for users
         $insert = "UPDATE users SET email=?, password=?, name=?, phone=? WHERE id=?";
 
